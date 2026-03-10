@@ -1,4 +1,4 @@
-package org.pom;
+package org.pageObjects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -10,13 +10,10 @@ public class LoginPage {
 	
 	WebDriver driver;
 	
-	public LoginPage(WebDriver driver) {
-		
-		PageFactory.initElements(driver, this);
-		
-	 	
-		
+	public LoginPage(WebDriver driver) {		
+		PageFactory.initElements(driver, this);		
 	}
+	
 	@FindBy(name="username")
 	 WebElement userName;
 
@@ -25,25 +22,19 @@ public class LoginPage {
 	}
 
 	
-	@FindBy(name = "password")
-	
+	@FindBy(name = "password")	
 	WebElement password;
 	
 	public WebElement setpassword() {
-		return password;
-		
-		
+		return password;		
 	}
 	
 	@FindBy(name = "login")
 	WebElement login;
 	
 	public WebElement setlogin() {
-		return login;
-		
+		return login;		
 	}
-	
-
 }
 
 
